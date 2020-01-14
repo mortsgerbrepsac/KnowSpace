@@ -1,7 +1,7 @@
 .container{
 display:grid;
 grid-template-columns:repeat(12, 1fr);
-grid-template-rows:100px 100px 1000px 150px;
+grid-template-rows:100px auto auto 150px;
 grid-gap:0px;
 }
 
@@ -30,6 +30,44 @@ footer{
 }
 
 
+@media screen and (max-width: 1190px){
+  .container{
+  display:grid;
+  grid-template-columns:repeat(12, 1fr);
+  grid-template-rows:100px auto auto auto 150px;
+  grid-gap:0px;
+  }
+
+  header{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  #menu{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  #left{
+    grid-column: 1/6;
+    grid-row: 3/4;
+  }
+
+  section{
+    grid-column: 6/-1;
+    grid-row: 3/4;
+  }
+
+  main{
+    grid-column: 1/-1;
+    grid-row: 4/5;
+  }
+
+  footer{
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
+}
 
 @media screen and (max-width: 866px){
 
