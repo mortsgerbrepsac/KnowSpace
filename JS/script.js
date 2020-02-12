@@ -6,7 +6,6 @@
   window.requestAnimationFrame = requestAnimationFrame;
 })();
 
-// Terrain stuff.
 var terrain = document.getElementById("terCanvas"),
   background = document.getElementById("bgCanvas"),
   terCtx = terrain.getContext("2d"),
@@ -18,16 +17,13 @@ var terrain = document.getElementById("terCanvas"),
 terrain.width = background.width = width;
 terrain.height = background.height = height;
 
-// Some random points
 var points = [],
   displacement = 140,
   power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
 
-// set the start height and end height for the terrain
 points[0] = (height - (Math.random()*height/2))-displacement;
 points[power] = (height - (Math.random()*height/2))-displacement;
 
-// create the rest of the points
 for(var i = 1; i<power; i*=2){
   for(var j = (power/i)/2; j <power; j+=power/i){
     points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
@@ -35,7 +31,6 @@ for(var i = 1; i<power; i*=2){
   displacement *= 0.6;
 }
 
-// draw the terrain
 terCtx.beginPath();
 
 for(var i = 0; i<=width; i++){
@@ -52,11 +47,9 @@ terCtx.lineTo(0,points[0]);
 terCtx.fill();
 
 
-// Second canvas used for the stars
 bgCtx.fillStyle = '#05004c';
 bgCtx.fillRect(0,0,width,height);
 
-// stars
 function Star(options){
   this.size = Math.random()*2;
   this.speed = Math.random()*.1;
@@ -90,7 +83,6 @@ ShootingStar.prototype.reset = function(){
   this.len = (Math.random()*80)+10;
   this.speed = (Math.random()*10)+6;
   this.size = (Math.random()*1)+0.1;
-  // this is used so the shooting stars arent constant
   this.waitTime =  new Date().getTime() + (Math.random()*3000)+500;
   this.active = false;
 }
@@ -117,16 +109,13 @@ ShootingStar.prototype.update = function(){
 
 var entities = [];
 
-// init the stars
 for(var i=0; i < height; i++){
   entities.push(new Star({x:Math.random()*width, y:Math.random()*height}));
 }
 
-// Add 2 shooting stars that just cycle.
 entities.push(new ShootingStar());
 entities.push(new ShootingStar());
 
-//animate background
 function animate(){
   bgCtx.fillStyle = '#05004c';
   bgCtx.fillRect(0,0,width,height);
@@ -142,3 +131,24 @@ function animate(){
   requestAnimationFrame(animate);
 }
 animate();
+
+function myFunction() {
+  var x = document.getElementById("right");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+  var y = document.getElementById("left");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+  var z =document.getElementById("main");
+  if (z.style.display === "none") {
+    z.style.display = "block";
+  } else {
+    z.style.display = "none";
+  }
+}

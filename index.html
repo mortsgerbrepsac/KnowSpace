@@ -13,7 +13,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        font-family: 'Titillium Web', sans-serif; */
+        font-family: 'Titillium Web', sans-serif;
       }
     </style>
   </head>
@@ -25,10 +25,10 @@
       <h1>KnowSpace</h1>
     </header>
     <nav id="menu">
-      <button>Hej</button>
-      <button>Hej</button>
-      <button>Hej</button>
-      <button>Hej</button>
+      <button class="menu" onclick="window.location.href = 'https://www.twitch.tv';" id="twitch">Twitch</button>
+      <button class="menu" onclick="window.location.href = 'https://www.youtube.com/?hl=sv&gl=SE';" id="youtube">Youtube</button>
+      <button class="menu" onclick="window.location.href = 'https://www.nasa.gov';" id="nasa"> N.A.S.A </button>
+      <button id="stars" onclick="myFunction()">Stars</button>
     </nav>
     <nav id="left">
       <div class="container-bild">
@@ -56,14 +56,16 @@
         </div>
       </div>
     </nav>
-    <main>
+    <main id="main">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/QvTmdIhYnes" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/e-P5IFTqB98" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </main>
-    <section>
+    <section id="right">
       <p>Theories</p>
-      <button class="nav-btn">Dark Matter Theory</button>
-      <button class="nav-btn">Black Hole Theory</button>
+      <button onclick="window.location.href='https://science.nasa.gov/astrophysics/focus-areas/what-is-dark-energy';" class="nav-btn">Dark Matter Theory</button>
+      <button onclick="window.location.href='https://www.space.com/15421-black-holes-facts-formation-discovery-sdcmp.html';" class="nav-btn">Black Hole Theory</button>
+      <button onclick="window.location.href='https://exoplanets.nasa.gov/what-is-an-exoplanet/about-exoplanets/';" class="nav-btn">Exoplanets</button>
+      <button onclick="window.location.href='https://spaceplace.nasa.gov/gravitational-waves/en/';" class="nav-btn">Gravity Waves</button>
     </section>
 
     <footer>

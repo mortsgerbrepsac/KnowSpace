@@ -1,5 +1,6 @@
 body{
-
+min-width: 400px;
+background-color: rgb(5, 0 ,76);
 }
 
 canvas{
@@ -75,18 +76,19 @@ transform: translate(-50%, -50%);
   text-align: center;
 }
 
-main{
+#main{
   background-color: rgb(229, 229, 229, 0.5);
   border: solid black 5px;
   text-align: center;
   padding-top: 10px;
 }
 
-section{
+#right{
   background-color: rgb(229, 229, 229, 0.5);
     border: solid black 5px;
     text-align: center;
-    font-size: 24px;
+    font-size: 44px;
+    color: black;
 }
 
 p{
@@ -114,7 +116,37 @@ h1{
 
 }
 
-#menu button{
+#twitch:hover{
+  background-color: rgb(120, 25, 255);
+  color: white;
+}
+
+#youtube:hover{
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+#nasa:hover{
+  background-color: rgb(0, 46, 149);
+  color: white;
+}
+
+#stars{
+  border: 1px solid white;
+  border-radius: 6px;
+  float: right;
+  background-color: rgb(0, 0, 0);
+  color: rgb(226, 226, 226);
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.menu{
   border: 1px solid white;
   border-radius: 6px;
   float: left;
@@ -123,19 +155,17 @@ h1{
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
+  width: auto;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
 }
 
-#menu button:hover{
+.menu:hover{
   padding-right: 45px;
-  background-color: white;
-  color: rgb(0, 0, 0);
 }
 
-#menu button:active{
+.menu:active{
   transform: translateY(4px);
 }
 
@@ -154,7 +184,7 @@ h1{
   margin-top: 10px;
 }
 .nav-btn:hover{
-  padding-right: 45px;
+  padding-right: 35px;
 }
 
 .container{
@@ -166,22 +196,53 @@ h1{
     font-size: 20px;
   }
 
-  #menu button{
-    width: 170px;
+  .menu{
+    width: 140px;
   }
 }
 
 @media screen and (max-width: 747px){
   .nav-btn{
-    font-size: 12px;
+    font-size: 18px;
     text-align: center;
     padding: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  #menu button{
-    width: 108px;
+  .menu{
+    width: 100px;
+    font-size: 20px;
+    padding: 10px;
+    transition: all 0s;
+  }
+
+  .menu:hover{
+    padding-right: 0px;
+  }
+
+  #stars{
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  #twitch:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+  #youtube:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+  #nasa:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+  .menu:hover{
+    padding-left: 0px;
   }
 }
 
