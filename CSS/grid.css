@@ -10,16 +10,19 @@ header{
   grid-row: 1/2;
 }
 
+/* Positionerar sektionen precis under rubriken */
 #menu{
   grid-column: 1/-1;
   grid-row: 2/3;
 }
 
+/* Positionerar sektionen till vänster på hemsidan */
 #left{
   grid-column: 1/3;
   grid-row: 3/4;
 }
 
+/* Positionerar sektionen i mitten på hemsidan */
 main{
   grid-column: 4/10;
   grid-row: 3/4;
